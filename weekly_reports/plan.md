@@ -1,14 +1,35 @@
-# L4-Project
-Informed Consent in Large Scale Studies
-##  Week 4 - Meeting Report
-Time: 11/10/2021 Mon 15:30-16:00
-###  Who am I?
-* Ruofan Guo
-### Week 2-3 Progress
-* Review Interaction System Lecture 1-5
-* Read the paper from professor
-### Questions
- 1. Is there a ready-made app or web for secondary development?
- 2. If I make the website myself, will the theme be my own?
- 3. Do I need to do an A/B test?
- 4. Is that alright I public all the level 4 project repositoreis in Github?
+# Plan
+* Project Title: Informed Consent in Large Scale Studies
+* Student Name: Ruofan Guo
+* Student ID: 2431011g
+* Supervisor Name: Alistair Morrison
+Week-by-week plan for the whole project. Update this as you go along.
+# Semester 1 (9-12)
+* week 1
+* week 2
++ week 3
+  - prepare for project
+  - email the professor to agree on the meeting time.
+* week 4
+  - reading 3 papers from professor
+  - decide on the web type details.
++ Week 9-10
+  - code generation for the basic constructs - hopefully
++ Week 11 [PROJECT WEEK]
+  - working on status report
++ Week 12 [PROJECT WEEK] 
+  - Status report submitted.
+# Winter break
+extend the project if have time
+# semester 2 (1-3)
+* Week 13
+* Week 14
+* Week 15
+* Week 16
+* Week 17
+* Week 19
+* Week 20
+* Week 21
+* Week 22
+* Week 23 [TERM ENDS]
+* Week 24 Dissertation submission deadline and presentations.
