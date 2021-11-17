@@ -1,26 +1,27 @@
 # flaskDemo
 
-本接口项目的技术选型：Python+Flask+MySQL+Redis，通过 Python+Falsk 来开发接口，使用 MySQL 来存储用户信息，使用 Redis 用于存储token，目前为纯后端接口，暂无前端界面，可通过 Postman、Jmeter、Fiddler 等工具访问请求接口。
+The technical selection of this interface project: Python+Flask+MySQL+Redis, the interface is developed through Python+Falsk, MySQL is used to store user information, and Redis is used to store tokens. It is currently a pure back-end interface, and there is no front-end interface. The request interface can be accessed through tools such as Postman, Jmeter, and Fiddler.
 
-## 项目部署
 
-首先，下载项目源码后，在根目录下找到 requirements.txt 文件，然后通过 pip 工具安装 requirements.txt 依赖，执行命令：
+## Project deployment
+
+First, after downloading the project source code, find the requirements.txt file in the root directory, then install the requirements.txt dependency through the pip tool, and execute the command:
 
 ```
 pip3 install -r requirements.txt
 ```
 
-接着，将项目部署起来，在本项目中其实就是利用 Python 执行 app.py 文件，以下为我在Linux上的部署命令。
+Next, deploy the project. In this project, Python is actually used to execute the app.py file. The following is my deployment command on Linux.
 
 ```
-# /root/flaskDemo/app.py表示项目根路径下的app.py启动入口文件路径
-# /root/flaskDemo/flaskDemo.log表示输出的日志文件路径
+# /root/flaskDemo/app.py Indicates the path of the app.py startup entry file under the project root path
+# /root/flaskDemo/flaskDemo.log Indicates the output log file path
 nohup python3 /root/flaskDemo/app.py >/root/flaskDemo/flaskDemo.log 2>&1 &
 ```
 
-## 数据库设计
+## Database Design
 
-数据库建表语句如下：
+The database table statement is as follows:
 
 ```
 CREATE TABLE `user` (
@@ -36,73 +37,73 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
-user表中各字段对应含义如下：
+The corresponding meanings of the fields in the user table are as follows:
 
 ```
-id：用户id号，自增长
-username：用户名
-password：密码
-role：用户角色，0表示管理员用户，1表示普通用户
-sex：性别，0表示男性，1表示女性，允许为空
-telephone：手机号
-address：联系地址，允许为空
+id: user id number, self-increasing
+username: username
+password: password
+role: user role, 0 means administrator user, 1 means normal user
+sex: sex, 0 means male, 1 means female, it is allowed to be empty
+telephone: mobile phone number
+address: contact address, it is allowed to be empty
 ```
 
-## 接口请求示例
+## Interface request example
 
-- 获取所有用户接口请求示例（可直接在浏览器输入栏请求）：
-
-```
-请求方式：GET
-请求地址：http://127.0.0.1:9999/users
-```
-
-- 获取wintest用户接口请求示例（可直接在浏览器输入栏请求）：
+-Get all user interface request examples (you can request directly in the browser input field):
 
 ```
-请求方式：GET
-请求地址：http://127.0.0.1:9999/users/wintest
+Request method: GET
+Request address: http://127.0.0.1:9999/users
 ```
 
-- 用户注册接口请求示例：
+- Get an example of wintest user interface request (you can request it directly in the browser input field):
 
 ```
-请求方式：POST
-请求地址：http://127.0.0.1:9999/register
-请求头：
+Request method: GET
+Request address: http://127.0.0.1:9999/users/wintest
+```
+
+- Example of user registration interface request:
+
+```
+Request method: POST
+Request address: http://127.0.0.1:9999/register
+Request header:
 Content-Type: application/json
 
 Body：{"username": "wintest5", "password": "123456", "sex": "1", "telephone":"13500010005", "address": "上海市黄浦区"}
 ```
 
-- 用户登录接口请求示例：
+- Example of user login interface request:
 
 ```
-请求方式：POST
-请求地址：http://127.0.0.1:9999/login
-请求头：
+Request method: POST
+Request address: http://127.0.0.1:9999/login
+Request header:
 Content-Type: application/x-www-form-urlencoded
 
 Body：username=wintest&password=123456
 ```
 
-- 修改用户接口请求示例（ token 可以从用户登录成功后的接口返回数据中获取）：
+- Example of a request to modify the user interface (the token can be obtained from the interface return data after the user logs in successfully):
 
 ```
-请求方式：PUT
-请求地址：http://127.0.0.1:9999/update/user/3
-请求头：
+Request method: PUT
+Request address: http://127.0.0.1:9999/update/user/3
+Request header:
 Content-Type: application/json
 
 Body：{"admin_user": "wintest", "token": "f54f9d6ebba2c75d45ba00a8832cb593", "sex": "1", "address": "广州市天河区", "password": "12345678", "telephone": "13500010003"}
 ```
 
-- 删除用户接口请求示例（ token 可以从用户登录成功后的接口返回数据中获取）：：
+-Example of a request to delete a user interface (the token can be obtained from the interface return data after the user logs in successfully):
 
 ```
-请求方式：POST
-请求地址：http://127.0.0.1:9999/delete/user/test
-请求头：
+Request method: POST
+Request address: http://127.0.0.1:9999/delete/user/test
+Request header:
 Content-Type: application/json
 
 Body：{"admin_user": "wintest", "token": "wintest1587830406"}
