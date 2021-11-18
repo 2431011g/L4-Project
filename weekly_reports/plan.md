@@ -4,7 +4,7 @@
 * Student ID: 2431011g
 * Supervisor Name: Alistair Morrison
 Week-by-week plan for the whole project. Update this as you go along.
-# Semester 1 (9-12)
+# Semester 1 (9-13)
 * week 1
 * week 2
 + week 3
