@@ -13,11 +13,24 @@ Week-by-week plan for the whole project. Update this as you go along.
 * week 4
   - reading 3 papers from professor
   - decide on the web type details.
+* week 5
+  - reading 3 papers from professor
+  - decide on the web type details. 
+* week 6
+  - design for experiment
+* week 7
+  - study for code part
+  - design for experiment]
+* week 8
+  - study for code part
+  - design for experiment]
 + Week 9-10
-  - code generation for the basic constructs - hopefully
+  - working on code
 + Week 11 [PROJECT WEEK]
   - working on status report
-+ Week 12 [PROJECT WEEK] 
++ Week 12 [PROJECT WEEK]
+  - working on status report
++ Week 13 [PROJECT WEEK] 
   - Status report submitted.
 # Winter break
 extend the project if have time
