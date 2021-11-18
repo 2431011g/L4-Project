@@ -63,16 +63,90 @@
 ### 18 Oct 2021
 
 * *0.5 hour* Hold the 2nd meeting with the supervisor
-* *0.5 hour* Organise the 1nd meeting minutes
+* *0.5 hour* Organise the 2nd meeting minutes
 
 ### 19 Oct 2021
 
-* *2 hour* Read the paper from supervisor and summarise
-
-### 20 Oct 2021
-
-* *2 hour* Read the paper from supervisor and summarise
+* *1 hour* Thinking about experiment
 
 ### 21 Oct 2021
 
-* *1 hour* Read the paper from supervisor and summarise
+* *1 hour* Thinking about experiment
+
+## Week 6
+### 25 Oct 2021
+
+* *0.5 hour* Hold the 3nd meeting with the supervisor
+* *0.5 hour* Organise the 3nd meeting minutes
+
+### 26 Oct 2021
+
+* *1 hour* Learning Flask
+
+### 27 Oct 2021
+
+* *1 hour* Learning Flask
+
+
+
+## Week 7
+### 01 Nov 2021
+
+* *0.5 hour* Hold the 4nd meeting with the supervisor
+* *0.5 hour* Organise the 4nd meeting minutes
+
+### 03 Nov 2021
+
+* *1 hour* Thinking about experiment
+
+### 04 Nov 2021
+
+ * *1 hour* Thinking about experiment
+
+### 05 Nov 2021
+
+* *1 hour* Thinking about experiment
+
+
+## Week 8
+
+### 08 Nov 2021
+
+* *0.5 hour* Hold the 5nd meeting with the supervisor
+* *0.5 hour* Organise the 5nd meeting minutes
+
+### 09 Nov 2021
+
+* *1 hour* Learning how to build the app back-end framework
+* *1 hour* Build the app back-end framework
+
+### 10 Nov 2021
+
+* *1 hour* Learning how to build the app back-end framework
+* *1 hour* Build the app back-end framework
+
+### 11 Nov 2021
+
+* *1 hour* Learning how to build the app back-end framework
+* *2 hour* Build the app back-end framework
+
+## Week 9
+
+### 15 Nov 2021
+
+* *1 hour* Learning how to build the app client-end framework
+* *2 hour* Build the app client-end framework
+
+### 19 Nov 2021
+
+## Week 10
+### 22 Nov 2021
+### 26 Nov 2021
+## Week 11
+### 29 Dec 2021
+### 03 Dec 2021
+## Week 12
+### 06 Dec 2021
+### 10 Dec 2021
+## Week 13
+### 13 Dec 2021
