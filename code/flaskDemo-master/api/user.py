@@ -50,8 +50,8 @@ def user_register():
         print("Find mobile phone number ==>> {}".format(res2))
         if res1:
             return jsonify({"code": 2002, "msg": "Username already exists, registration failed!"})
-        elif not (sex == "0" or sex == "1"):
-            return jsonify({"code": 2003, "msg": "The entered gender can only be 0 (male) or 1 (female)!"})
+        # elif not (sex == "0" or sex == "1"):
+        #     return jsonify({"code": 2003, "msg": "The entered gender can only be 0 (male) or 1 (female)!"})
         elif not (len(telephone) == 11 and re.match("^1[3,5,7,8]\d{9}$", telephone)):
             return jsonify({"code": 2004, "msg": "Phone number format is incorrect!"})
         elif res2:
@@ -100,7 +100,7 @@ def user_login():
 
 @app.route("/update/user/<int:id>", methods=['PUT'])
 def user_update(id): # id is the user ID to be modified
-   """Modify user information"""
+    """Modify user information"""
     admin_user = request.json.get("admin_user", "").strip() # The currently logged-in administrator user
     token = request.json.get("token", "").strip()  # token
     new_password = request.json.get("password", "").strip()  # new password
@@ -108,9 +108,9 @@ def user_update(id): # id is the user ID to be modified
     new_telephone = request.json.get("telephone", "").strip()  # new telephone number
     new_address = request.json.get("address", "").strip()  # New contact address, empty string by default
     if admin_user and token and new_password and new_telephone: # Note that the empty string "" in the if condition is also empty, which is treated as False
-        if not (new_sex == "0" or new_sex == "1"):
-            return jsonify({"code": 4007, "msg": "Error！"})
-        elif not (len(new_telephone) == 11 and re.match("^1[3,5,7,8]\d{9}$", new_telephone)):
+        # if not (new_sex == "0" or new_sex == "1"):
+        #     return jsonify({"code": 4007, "msg": "Error！"})
+        if not (len(new_telephone) == 11 and re.match("^1[3,5,7,8]\d{9}$", new_telephone)):
             return jsonify({"code": 4008, "msg": "Phone number format is incorrect! ! !"})
         else:
             redis_token = redis_db.handle_redis_token(admin_user) # Take token from redis
