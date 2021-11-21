@@ -4,7 +4,7 @@ from config.setting import MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWD, MYS
 class MysqlDb():
 
     def __init__(self, host, port, user, passwd, db):
-        # 建立数据库连接
+        # Establish a database connection
         self.conn = pymysql.connect(
             host=host,
             port=port,
@@ -13,37 +13,37 @@ class MysqlDb():
             db=db,
             autocommit=True
         )
-        # 通过 cursor() 创建游标对象，并让查询结果以字典格式输出
+        # Create a cursor object through cursor() and output the query result in dictionary format
         self.cur = self.conn.cursor(cursor=pymysql.cursors.DictCursor)
 
-    def __del__(self): # 对象资源被释放时触发，在对象即将被删除时的最后操作
-        # 关闭游标
+    def __del__(self): # Triggered when the object resource is released, the last operation when the object is about to be deleted
+        # Close the cursor
         self.cur.close()
-        # 关闭数据库连接
+        # Close the database connection
         self.conn.close()
 
     def select_db(self, sql):
-        """查询"""
-        # 检查连接是否断开，如果断开就进行重连
+        """Inquire"""
+        # Check whether the connection is disconnected, and reconnect if disconnected
         self.conn.ping(reconnect=True)
-        # 使用 execute() 执行sql
+        # Use execute() to execute sql
         self.cur.execute(sql)
-        # 使用 fetchall() 获取查询结果
+        # Use fetchall() to get query results
         data = self.cur.fetchall()
         return data
 
     def execute_db(self, sql):
-        """更新/新增/删除"""
+        """Update/Add/Delete"""
         try:
-            # 检查连接是否断开，如果断开就进行重连
+            # Check whether the connection is disconnected, and reconnect if disconnected
             self.conn.ping(reconnect=True)
-            # 使用 execute() 执行sql
+            # Use execute() to execute sql
             self.cur.execute(sql)
-            # 提交事务
+            # Commit transaction
             self.conn.commit()
         except Exception as e:
-            print("操作出现错误：{}".format(e))
-            # 回滚所有更改
+            print("An error occurred during operation: {}".format(e))
+            # Roll back all changes
             self.conn.rollback()
 
 db = MysqlDb(MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWD, MYSQL_DB)
